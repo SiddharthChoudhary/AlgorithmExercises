@@ -6,7 +6,9 @@ public class MaxdifferenceEvenOdd{
             //if it's even
             if(input[i]%2==0){
             if(input[i]>greatestEven){
-                greatestEven=input[i];
+                if(smallestOdd!=999999){
+                    greatestEven=input[i];
+                }
             }
             }
             //if odd
@@ -22,7 +24,7 @@ public class MaxdifferenceEvenOdd{
         return greatestEven-smallestOdd;
     }
     public static void main(String args[]){
-        int[] input =   {2,4,6,36};
+        int[] input =   {1,2,4,6,36};
         MaxdifferenceEvenOdd object = new MaxdifferenceEvenOdd();
         System.out.println(object.maxdifferenceEvenOdd(input));
     }
