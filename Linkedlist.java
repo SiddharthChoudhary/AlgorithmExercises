@@ -9,7 +9,7 @@ class Linkedlist{
         this.data   =   data;
         this.next   =   null;
     }
-}
+    }
     public void add(Node n){
         if(this.head==null){
             head =   n;
@@ -17,23 +17,23 @@ class Linkedlist{
         Node tmp    =   this.head;
         while(tmp.next!=null){
             tmp =   tmp.next;
-        }    
+        }
         tmp.next = n;
         n.next=null;
     }
     //Question to reverse a list being implemented, All you need is to diplay the list at the end in this function
     public void reverseList(){
-        Node prev = null; 
-        Node current = this.head; 
-        Node next = null; 
-        while (current != null) { 
-            next = current.next; 
-            current.next = prev; 
-            prev = current; 
-            current = next; 
-        } 
+        Node prev = null;
+        Node current = this.head;
+        Node next = null;
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
         this.head = prev;
-        Node tmp    =   this.head; 
+        Node tmp    =   this.head;
         while(tmp!=null){
             System.out.println(tmp.data);
             tmp=tmp.next;
@@ -49,16 +49,16 @@ class Linkedlist{
                     tmp2.next     =  tmp2.next.next;
                 }else{
                     tmp2    =   tmp2.next;
-                }   
+                }
             }
             tmp=    tmp.next;
-        }                                                               
+        }
         Node tomp   =   this.head;
         while(tomp!=null){
             System.out.println(tomp.data);
             tomp=   tomp.next;
         }
-    }    
+    }
     //function to find out nth from the end of the list
     public void nthNodeToLast(int n){
         Node tmp    =   this.head;
@@ -82,7 +82,7 @@ class Linkedlist{
             n=n.next;
         }
         n.data=n.next.data;
-        n.next=n.next.next;    
+        n.next=n.next.next;
     }
     //function to addTwoList() and return answer
     public static Linkedlist addtwolist(Linkedlist list1,Linkedlist list2){
@@ -97,7 +97,7 @@ class Linkedlist{
             if(temp>9){
                 carry=temp/10;
                 temp-=10;
-            }   
+            }
                 Node n             =   new  Node(temp);
                 list3.add(n);
                 tmp1=tmp1.next;
@@ -113,17 +113,17 @@ class Linkedlist{
         Linkedlist  list    =   new Linkedlist();
         Node  n             =   new Node(3);
         list.add(n);
-        
+
         Node  n4             =   new Node(36);
         list.add(n4);
-        
+
         Node tmp            =   list.head;
         //questions on Linkedlist
         //list.reverseList();
         //list.deleteDuplicatesFromLinkedList();
         //list.nthNodeToLast(6);
-        
-        /*To run the deleteFrommiddle function 
+
+        /*To run the deleteFrommiddle function
         while(tmp.next.data!=36){
             tmp=tmp.next;
         }
